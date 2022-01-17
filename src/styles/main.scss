@@ -1,0 +1,44 @@
+/*
+ * Import npm dependencies
+ *
+ * Prefix your imports with `~` to grab from node_modules/
+ * @see https://github.com/webpack-contrib/sass-loader#imports
+*/
+
+//
+// Vendors/settings
+//
+@import 'functions/index';
+//@import 'variables';
+//@import 'mixins/basic';
+//@import 'swiper/css/swiper';
+
+/*
+    Base
+*/
+// @import './base/columns';
+//@import './base/utilities';
+//@import './base/basic_elements';
+@import './base/typography';
+//@import './base/commons';
+
+//@import '../../template-parts/components/**/style.scss';
+//@import '../../template-parts/blocks/**/style.scss';
+
+/*
+    Layout: everything that takes part in laying out the site or application.
+*/
+//@import 'layout/header';
+//@import 'layout/menu';
+//@import 'layout/main';
+//@import 'layout/footer';
+
+/*
+    Pages: page-specific styles
+*/
+//@import 'pages/page-template-default';
+//@import 'pages/404';
+
+body {
+    background-color: blue;
+}

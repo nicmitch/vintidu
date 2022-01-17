@@ -1,0 +1,6 @@
+.cache-loader
+.cache/
+node_modules/
+templates/compiled/**
+*.DS_Store
+dist/

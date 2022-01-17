@@ -1,0 +1,117 @@
+
+
+.block-content-img {
+
+    &__imgs {
+        position: relative;
+    }
+
+    &__img--small {
+
+        @include breakpoint(medium) {
+            position: absolute;
+            bottom: -100px;
+            right: 50px;
+        }
+    }
+
+    .bg-circle {
+        &--1 {
+            bottom: -120px;
+        }
+
+        &--2 {
+            bottom: 20px;
+            left: 180px;
+        }
+
+        &--3 {
+            bottom: 50px;
+            left: 0px;
+        }
+    }
+
+    &.block-content-img--reverse {
+
+        .block-content-img__img--small {
+            right: auto;
+            left: 50px;
+        }
+
+        .bg-circle {
+            &--1 {
+                bottom: -120px;
+                right: 0;
+            }
+
+            &--2 {
+                bottom: 20px;
+                right: 180px;
+                left: auto;
+            }
+
+            &--3 {
+                bottom: 50px;
+                right: 0px;
+                left: auto;
+            }
+        }
+    }
+
+    @include breakpoint(small only) {
+
+        .block-content-img__img--small {
+            transform: translateY(-15px);
+            width: 75vw;
+            margin-left: auto;
+            margin-right: 0;
+            display: block;
+        }
+
+        .block-content-img__img--big {
+            margin-left: 0;
+            margin-right: auto;
+            width: 87vw;
+            display: block;
+        }
+
+        .block-content-img__content {
+            margin-bottom: 100px;
+        }
+
+        &.block-content-img--reverse {
+
+            .block-content-img__img--big {
+                margin-left: auto;
+                margin-right: 0;
+            }
+
+            .block-content-img__img--small {
+                margin-left: 0;
+                margin-right: auto;
+            }
+        }
+    }
+
+    @include breakpoint(large) {
+        &__img--big {
+            transform: translateX(100px);
+        }
+
+        &:not(&.block-content-img--reverse) {
+
+            .block-content-img__imgs {
+                order: 1;
+            }
+
+            .block-content-img__content {
+                order: 2;
+            }
+
+            .block-content-img__img--big {
+                transform: translateX(-100px);
+            }
+
+        }
+    }
+}

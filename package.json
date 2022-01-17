@@ -1,0 +1,35 @@
+{
+  "name": "vintidu",
+  "version": "1.0.0",
+  "description": "A Wordpress starter theme",
+  "main": "main.js",
+  "scripts": {
+    "test": "test",
+    "start": "concurrently \"npm run parcel-dev\" \"npm run browsersync\"",
+    "build:production": "parcel build ./src/js/main.js",
+    "parcel-dev": "parcel watch ./src/js/main.js",
+    "browsersync": "browser-sync start -c ./config/bs-config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicmitch/vintidu.git"
+  },
+  "keywords": [
+    "Wordpress",
+    "starter",
+    "theme",
+    "parcel"
+  ],
+  "author": "@nicmitch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicmitch/vintidu/issues"
+  },
+  "homepage": "https://github.com/nicmitch/vintidu#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "concurrently": "^4.1.0",
+    "parcel-bundler": "^1.11.0",
+    "sass": "^1.17.0"
+  }
+}
